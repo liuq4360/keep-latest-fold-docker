@@ -5,14 +5,11 @@ ADD ./FileDelete.jar /opt/
 
 WORKDIR /opt/
 
-RUN chmod 755 /opt/start.sh
-RUN chmod 755 /opt/start.sh && useradd delete \
+RUN chmod 755 /opt/start.sh \
    && mkdir /opt/log/ \
-   && chown -R delete.delete /opt/log/
+   && chmod 777 /opt/log/
 
 VOLUME /opt/log/
-
-USER delete
 
 CMD /opt/start.sh
 

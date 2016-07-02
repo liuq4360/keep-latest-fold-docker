@@ -1,4 +1,4 @@
 #!/bin/bash -x
 
-java -jar FileDelete.jar /hadoopecosystem/spark/work 3
+java -jar FileDelete.jar /opt/log/ 3
 
